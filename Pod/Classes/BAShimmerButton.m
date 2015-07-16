@@ -27,18 +27,20 @@
 
 @property (strong, nonatomic) CAGradientLayer *gradientLayer;
 
+@property (assign, nonatomic) bool onState;
+
+//Properties for icon on and off states
 @property (strong, nonatomic) CALayer *iconOffLayer;
 @property (strong, nonatomic) CALayer *iconOnLayer;
 @property (strong, nonatomic) CAShapeLayer *innerOnIconLayer;
+
+//Properties for button on and off states
 @property (strong, nonatomic) CABasicAnimation *shimmerAnimation;
+@property (strong, nonatomic) CAAnimationGroup *showButtonAnimationGroup;
+@property (strong, nonatomic) CAAnimationGroup *groupHideAnimationGroup;
 
-@property (strong, nonatomic) CAAnimationGroup *groupShowAnimation;
-@property (strong, nonatomic) CAAnimationGroup *groupHideAnimation;
-
-@property (assign, nonatomic) bool OnState;
-
+//Properties for wiggle
 @property(strong, nonatomic) UIDynamicAnimator *animator;
-
 
 @end
 
@@ -46,8 +48,7 @@
 
 #pragma mark - Lifecycle
 
--  (id)initWithFrame:(CGRect)aRect
-{
+-  (id)initWithFrame:(CGRect)aRect {
     self = [super initWithFrame:aRect];
     
     if (self)
@@ -59,7 +60,6 @@
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    
     self = [super initWithCoder:aDecoder];
     
     if (self)
@@ -86,7 +86,7 @@
 }
 
 - (void)setShimmerDirection:(BAShimmerDirection)shimmerDirection {
-   _shimmerDirection = shimmerDirection;
+    _shimmerDirection = shimmerDirection;
     [self setGradientDirection];
     [self createShimmerAnimation];
 }
@@ -107,25 +107,187 @@
     [self createIconImages];
     [self.layer addSublayer:self.iconOffLayer];
     [self.layer addSublayer:self.iconOnLayer];
-    if (!self.OnState) {
-//        self.innerOnIconLayer.transform = CATransform3DMakeScale(0.0, 0.0, 1.0);
-        self.innerOnIconLayer.opacity = 0.0;
-        CABasicAnimation *shrinkAnimation;
-        shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        shrinkAnimation.duration=0.0f;
-        shrinkAnimation.fillMode = kCAFillModeForwards;
-        shrinkAnimation.removedOnCompletion = NO;
-        shrinkAnimation.toValue= @0.0;
+    
+    //BUG
+    //For some reason just  changing the transform causing the initial animation to glitch
+    //Doesn't seem to be setting the correct tranform scale factor
+    if (!self.onState) {
+        self.innerOnIconLayer.opacity = 0.0f;
+        CABasicAnimation *transformHotFix;
+        transformHotFix=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        transformHotFix.duration=0.0f;
+        transformHotFix.fillMode = kCAFillModeForwards;
+        transformHotFix.removedOnCompletion = NO;
+        transformHotFix.toValue= @0.0f;
         [CATransaction begin];
         [CATransaction setCompletionBlock:^{
-            self.innerOnIconLayer.opacity = 1.0;
+            self.innerOnIconLayer.opacity = 1.0f;
         }];
-        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
+        [self.innerOnIconLayer addAnimation:transformHotFix forKey:@"shrinkingInner"];
         [CATransaction commit];
     }
 }
 
 #pragma mark - Private
+
+- (void)createShimmerAnimation {
+    self.gradientLayer = [CAGradientLayer layer];
+    self.gradientLayer.frame = self.bounds;
+    
+    //set gradient for shimmer
+    self.gradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)self.shimmerColor.CGColor, (id)[UIColor clearColor].CGColor];
+    
+    //Space out the gradient based on width
+    NSArray *startLocations = @[@0.0f, @(self.gradientSize / 2), @(self.gradientSize)];
+    NSArray *endLocations = @[@(1.0f - self.gradientSize), @(1.0f - (self.gradientSize / 2)), @1.0f];
+    
+    self.gradientLayer.locations = startLocations;
+    [self setGradientDirection];
+    
+    //Shimmering button properties
+    self.shimmerAnimation = [CABasicAnimation animationWithKeyPath:@"locations"];
+    self.shimmerAnimation.fromValue = startLocations;
+    self.shimmerAnimation.toValue = endLocations;
+    self.shimmerAnimation.duration  = self.shimmerDuration;
+    self.shimmerAnimation.repeatCount = HUGE_VALF;
+}
+
+- (void)initialize {
+    
+    //default values
+    _shimmerDuration = 1.0f;
+    _shimmerDirection = BAShimmerDirectionDiagonalLeftToRight;
+    _shimmerColor = [UIColor colorWithHex:0x5A6363];
+    _gradientSize = 30.0f / CGRectGetWidth(self.frame);
+    self.onState = NO;
+    [self setGradientDirection];
+    [self createShimmerAnimation];
+    
+    [self.layer addSublayer:self.gradientLayer];
+    [self shimmerOn];
+
+    
+    //hide initially
+    self.alpha = 0.0f;
+    
+    //showButton Animations
+    CABasicAnimation *growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    growAnimation.duration=0.2f;
+    growAnimation.beginTime = 0.0f;
+    growAnimation.fromValue= @0.2;
+    growAnimation.fillMode = kCAFillModeForwards;
+    growAnimation.toValue=@1.0;
+    
+    CABasicAnimation *growPopAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    growPopAnimation.duration=0.2f;
+    growPopAnimation.beginTime = growAnimation.duration;
+    growPopAnimation.fromValue=@1.0;
+    growPopAnimation.toValue=@1.4;
+    growPopAnimation.autoreverses = YES;
+    
+    self.showButtonAnimationGroup = [CAAnimationGroup animation];
+    self.showButtonAnimationGroup.duration = growAnimation.duration + growPopAnimation.duration*2.0f;
+    self.showButtonAnimationGroup.removedOnCompletion = NO;
+    self.showButtonAnimationGroup.fillMode = kCAFillModeForwards;
+    self.showButtonAnimationGroup.animations = @[growAnimation,growPopAnimation];
+    
+    //hideButton Animations
+    CABasicAnimation *shrinkPopAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    shrinkPopAnimation.duration=0.2f;
+    shrinkPopAnimation.beginTime = 0.0f;
+    shrinkPopAnimation.fromValue=@1.0;
+    shrinkPopAnimation.toValue=@1.4;
+    shrinkPopAnimation.autoreverses = YES;
+    
+    CABasicAnimation *shrinkAnimation;
+    shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    shrinkAnimation.duration=0.2f;
+    shrinkAnimation.beginTime = shrinkPopAnimation.duration*2;
+    shrinkAnimation.fromValue= @1.0;
+    shrinkAnimation.fillMode = kCAFillModeForwards;
+    shrinkAnimation.toValue= @0.1;
+    
+    
+    self.groupHideAnimationGroup = [CAAnimationGroup animation];
+    self.groupHideAnimationGroup.duration = shrinkPopAnimation.duration*2.0f + shrinkAnimation.duration;
+    self.groupHideAnimationGroup.removedOnCompletion = YES;
+    self.groupHideAnimationGroup.fillMode = kCAFillModeForwards;
+    self.groupHideAnimationGroup.animations = @[shrinkPopAnimation,shrinkAnimation];
+    
+}
+
+
+- (void)toggleButton {
+    
+    //In case button gets pressed mid animation
+    CGFloat currentScaleValue = [[self.innerOnIconLayer.presentationLayer valueForKeyPath: @"transform.scale"] floatValue];
+    
+    //if on, turn off
+    if (self.onState) {
+        [self.innerOnIconLayer removeAnimationForKey:@"growingInner"];
+        CABasicAnimation *shrinkAnimation;
+        shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        shrinkAnimation.duration=1.0f;
+        shrinkAnimation.fromValue= @(currentScaleValue);
+        shrinkAnimation.fillMode = kCAFillModeForwards;
+        shrinkAnimation.removedOnCompletion = NO;
+        shrinkAnimation.toValue= @0.0;
+        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
+        
+        self.onState = NO;
+        [self shimmerOn];
+    }
+    
+    //if off turn on
+    else {
+        [self shimmerOff];
+        CABasicAnimation *growAnimation;
+        [self.innerOnIconLayer removeAnimationForKey:@"shrinkingInner"];
+        growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        growAnimation.duration=1.0f;
+        growAnimation.fromValue= @(currentScaleValue);
+        growAnimation.fillMode = kCAFillModeForwards;
+        growAnimation.removedOnCompletion = NO;
+        growAnimation.toValue= @1.0;
+        
+        self.onState = YES;
+        [self.innerOnIconLayer addAnimation:growAnimation forKey:@"growingInner"];
+    }
+    
+    
+}
+
+- (void)shimmerOn {
+    [self.gradientLayer addAnimation:self.shimmerAnimation forKey:@"animateGradient"];
+}
+
+- (void)shimmerOff {
+    [self.gradientLayer removeAnimationForKey:@"animateGradient"];
+}
+
+#pragma mark - Public
+
+- (void)showButtonWithAnimation:(bool)animated {
+    self.alpha = 1.0f;
+    if(animated){
+        [self.layer addAnimation:self.showButtonAnimationGroup forKey:@"showButton"];
+    }
+}
+
+- (void)hideButtonWithAnimation:(bool)animated {
+    if(animated){
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            self.alpha = 0.0f;
+        }];
+        [self.layer addAnimation:self.groupHideAnimationGroup forKey:@"hideButton"];
+        [CATransaction commit];
+    }
+    else {
+        self.alpha = 0.0f;
+    }
+}
+
 
 - (void)createIconImages {
     
@@ -138,7 +300,7 @@
     self.iconOffLayer = [CAShapeLayer layer];
     self.iconOffLayer.frame = CGRectMake(0,0, self.iconImage.size.width, self.iconImage.size.height);
     self.iconOffLayer.backgroundColor = [UIColor blackColor].CGColor;
-
+    
     if (self.iconOffImageColor) {
         self.iconOffLayer.backgroundColor = self.iconOffImageColor.CGColor;
     }
@@ -150,16 +312,13 @@
     self.iconOnLayer.frame =  CGRectMake(0,0, self.iconImage.size.width, self.iconImage.size.height);
     self.iconOnLayer.position = CGPointMake(CGRectGetWidth(self.bounds)/2,CGRectGetHeight(self.bounds)/2);
     self.iconOnLayer.contents = (id)self.iconImage.CGImage;
-
+    
     self.innerOnIconLayer = [CAShapeLayer layer];
-    UIBezierPath *circularPath=[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.frame.size.width,self.frame.size.height) cornerRadius:MAX(self.frame.size.width/2,self.frame.size.height/2)];
+    UIBezierPath *circularPath=[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, CGRectGetWidth(self.frame),CGRectGetHeight(self.frame)) cornerRadius:MAX(CGRectGetWidth(self.frame)/2,CGRectGetHeight(self.frame)/2)];
     self.innerOnIconLayer.path = circularPath.CGPath;
+
     self.innerOnIconLayer.frame = self.frame;
-    self.innerOnIconLayer.position = CGPointMake(self.bounds.size.width/2,self.bounds.size.height/2);
-    
-    
-    self.innerOnIconLayer.frame = self.frame;
-    self.innerOnIconLayer.position = CGPointMake(self.iconOnLayer.frame.size.width/2,self.iconOnLayer.frame.size.height/2);
+    self.innerOnIconLayer.position = CGPointMake(CGRectGetWidth(self.iconOnLayer.frame)/2,CGRectGetHeight(self.iconOnLayer.frame)/2);
     self.iconOnLayer.mask = self.innerOnIconLayer;
 }
 
@@ -206,163 +365,6 @@
         {
             break;
         }
-    }
-}
-
-- (void)createShimmerAnimation {
-    
-    self.gradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)self.shimmerColor.CGColor, (id)[UIColor clearColor].CGColor];
-    
-    //2.b spaces out the gradient based on width
-    NSArray *startLocations = @[@0.0f, @(self.gradientSize / 2), @(self.gradientSize)];
-    NSArray *endLocations = @[@(1.0f - self.gradientSize), @(1.0f - (self.gradientSize / 2)), @1.0f];
-    
-    [self setGradientDirection];
-    
-    //2.c add rest of location properties to gradient layer
-    self.gradientLayer.locations = startLocations;
-    
-    //2.d animate the shimmering to occur until the button is pressed
-    self.shimmerAnimation = [CABasicAnimation animationWithKeyPath:@"locations"];
-    self.shimmerAnimation.fromValue = startLocations;
-    self.shimmerAnimation.toValue = endLocations;
-    self.shimmerAnimation.duration  = self.shimmerDuration;
-    self.shimmerAnimation.repeatCount = HUGE_VALF;
-    [self.gradientLayer addAnimation:self.shimmerAnimation forKey:@"animateGradient"];
-}
-
-- (void)initialize {
-    self.gradientLayer = [CAGradientLayer layer];
-    self.gradientLayer.frame = self.bounds;
-
-    //default values
-    _shimmerDuration = 1.0f;
-    _shimmerDirection = BAShimmerDirectionDiagonalLeftToRight;
-    _shimmerColor = [UIColor colorWithHex:0x5A6363];
-    _gradientSize = 30.0f / CGRectGetWidth(self.frame);
-    [self setGradientDirection];
-    
-    [self createShimmerAnimation];
-    [self.layer addSublayer:self.gradientLayer];
-    
-    //3.a Configure outline of Off button image
-    self.OnState = NO;
-    
-    //hide initially
-    self.alpha = 0.0f;
-    
-    //showButton Animations
-    CABasicAnimation *growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    growAnimation.duration=0.2f;
-    growAnimation.beginTime = 0.0f;
-    growAnimation.fromValue= @0.2;
-    growAnimation.fillMode = kCAFillModeForwards;
-    growAnimation.toValue=@1.0;
-    
-    CABasicAnimation *popGrowAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    popGrowAnimation.duration=0.2f;
-    popGrowAnimation.beginTime = growAnimation.duration;
-    popGrowAnimation.fromValue=@1.0;
-    popGrowAnimation.toValue=@1.4;
-    popGrowAnimation.autoreverses = YES;
-    
-    self.groupShowAnimation = [CAAnimationGroup animation];
-    self.groupShowAnimation.duration = growAnimation.duration + popGrowAnimation.duration*2.0f;
-    self.groupShowAnimation.removedOnCompletion = NO;
-    self.groupShowAnimation.fillMode = kCAFillModeForwards;
-    self.groupShowAnimation.animations = @[growAnimation,popGrowAnimation];
-    
-    //hideButton Animations
-    CABasicAnimation *popShrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    popShrinkAnimation.duration=0.2f;
-    popShrinkAnimation.beginTime = 0.0f;
-    popShrinkAnimation.fromValue=@1.0;
-    popShrinkAnimation.toValue=@1.4;
-    popShrinkAnimation.autoreverses = YES;
-    
-    CABasicAnimation *shrinkAnimation;
-    shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    shrinkAnimation.duration=0.2f;
-    shrinkAnimation.beginTime = popShrinkAnimation.duration*2;
-    shrinkAnimation.fromValue= @1.0;
-    shrinkAnimation.fillMode = kCAFillModeForwards;
-    shrinkAnimation.toValue= @0.1;
-    
-    
-    self.groupHideAnimation = [CAAnimationGroup animation];
-    self.groupHideAnimation.duration = popShrinkAnimation.duration*2.0f + shrinkAnimation.duration;
-    self.groupHideAnimation.removedOnCompletion = YES;
-    self.groupHideAnimation.fillMode = kCAFillModeForwards;
-    self.groupHideAnimation.animations = @[popShrinkAnimation,shrinkAnimation];
-
-}
-
-
-- (void)toggleButton {
-    
-    CGFloat currentScaleValue = [[self.innerOnIconLayer.presentationLayer valueForKeyPath: @"transform.scale"] floatValue];
-
-    //if on, turn off
-    if (self.OnState) {
-        
-        [self.innerOnIconLayer removeAnimationForKey:@"growingInner"];
-        CABasicAnimation *shrinkAnimation;
-        shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        shrinkAnimation.duration=1.0f;
-        shrinkAnimation.fromValue= @(currentScaleValue);
-        shrinkAnimation.fillMode = kCAFillModeForwards;
-        shrinkAnimation.removedOnCompletion = NO;
-        shrinkAnimation.toValue= @0.0;
-        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
-        self.OnState = NO;
-        [self shimmerOn];
-    }
-    
-    //if off turn on
-    else {
-        [self shimmerOff];
-        CABasicAnimation *growAnimation;
-        [self.innerOnIconLayer removeAnimationForKey:@"shrinkingInner"];
-        growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        growAnimation.duration=1.0f;
-        growAnimation.fromValue= @(currentScaleValue);
-        growAnimation.fillMode = kCAFillModeForwards;
-        growAnimation.removedOnCompletion = NO;
-        growAnimation.toValue= @1.0;
-        
-        self.OnState = YES;
-        [self.innerOnIconLayer addAnimation:growAnimation forKey:@"growingInner"];
-    }
-    
-  
-}
-
-- (void)shimmerOn {
-    [self.gradientLayer addAnimation:self.shimmerAnimation forKey:@"animateGradient"];
-}
-
-- (void)shimmerOff {
-    [self.gradientLayer removeAnimationForKey:@"animateGradient"];
-}
-
-- (void)showButtonWithAnimation:(bool)animated {
-    self.alpha = 1.0f;
-    if(animated){
-    [self.layer addAnimation:self.groupShowAnimation forKey:@"showButton"];
-    }
-}
-
-- (void)hideButtonWithAnimation:(bool)animated {
-    if(animated){
-        [CATransaction begin];
-        [CATransaction setCompletionBlock:^{
-            self.alpha = 0.0f;
-        }];
-        [self.layer addAnimation:self.groupHideAnimation forKey:@"hideButton"];
-        [CATransaction commit];
-    }
-    else {
-        self.alpha = 0.0f;
     }
 }
 
