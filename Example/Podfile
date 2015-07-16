@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'BAShimmerButton_Example', :exclusive => true do
+  pod "BAShimmerButton", :path => "../"
+end
+
+target 'BAShimmerButton_Tests', :exclusive => true do
+  pod "BAShimmerButton", :path => "../"
+
+  
+end

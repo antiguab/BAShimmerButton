@@ -1,0 +1,14 @@
+PODS:
+  - BAShimmerButton (0.1.0)
+
+DEPENDENCIES:
+  - BAShimmerButton (from `../`)
+
+EXTERNAL SOURCES:
+  BAShimmerButton:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BAShimmerButton: 065d5f683646183dc9d552cd499374febe927379
+
+COCOAPODS: 0.37.2

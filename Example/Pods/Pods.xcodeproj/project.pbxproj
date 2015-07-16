@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0732734F49BB9B88D3A115CA /* BAShimmerButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E82EA372911D56AFBB58718D /* BAShimmerButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F9224F0044C4FE7632BDCF4 /* Pods-BAShimmerButton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BAE1EA143209EEA36E1421C /* Pods-BAShimmerButton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1802444AF1D233617785CBC1 /* Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB99D3C907C69B7FA62C725 /* Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31361D59BE5EEE66CE5BB53D /* BAShimmerButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E82EA372911D56AFBB58718D /* BAShimmerButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54CE6F9FB9D04095691977AA /* BAShimmerButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CF41DA8AB110C47DF302E68 /* BAShimmerButton.bundle */; };
+		65403985332AE25043DE6A98 /* Pods-BAShimmerButton_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 969B2E404BDA41AD3E9CF863 /* Pods-BAShimmerButton_Example-dummy.m */; };
+		7772438E7F7EA3942A99FF6E /* Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13361ECD074BFA7E008470 /* Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m */; };
+		88A0451E28B3A498CA6AEE74 /* BAShimmerButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC40177364A4843AE739E5E5 /* BAShimmerButton.bundle */; };
+		8B25A98960B7B591B8C1BC83 /* BAShimmerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD3CFF3813D2486B64B4BB9 /* BAShimmerButton.m */; };
+		973418128445EFF029894359 /* BAShimmerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD3CFF3813D2486B64B4BB9 /* BAShimmerButton.m */; };
+		98C30655770772B8BE514AFE /* Pods-BAShimmerButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 422501D807D21FF706607A8D /* Pods-BAShimmerButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4EBC6D148A3E98D28B8F2A1 /* Pods-BAShimmerButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B1BC036E69EEBB65A9A5CA /* Pods-BAShimmerButton_Tests-dummy.m */; };
+		AB2E7A6F5390292E601A949A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D9E8567CD623C000084613 /* Foundation.framework */; };
+		C6C72F17E0A1136BA7A4793F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D9E8567CD623C000084613 /* Foundation.framework */; };
+		C905D81A72100F6B27A3A646 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D9E8567CD623C000084613 /* Foundation.framework */; };
+		CE0CDD5D62E59CB2293895F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D9E8567CD623C000084613 /* Foundation.framework */; };
+		D0D4BCF51B532DB80034AABA /* UIColor+ColorWithHex.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D4BCF31B532DB80034AABA /* UIColor+ColorWithHex.h */; };
+		D0D4BCF61B532DB80034AABA /* UIColor+ColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D4BCF41B532DB80034AABA /* UIColor+ColorWithHex.m */; };
+		D24460AF69C0ABA73488FB59 /* Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B5CB227888E03A992636F8 /* Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m */; };
+		E38555BC40B64883C467CDFE /* Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2435A720CD3852AD92D7CAF6 /* Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C34B4D77F60C62FA2138B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443418ABC52017EE0318DDBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B854F1E7EC3A3197F3389C4;
+			remoteInfo = "Pods-BAShimmerButton_Example-BAShimmerButton";
+		};
+		8FA4E8CCB3699B1429FE3ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443418ABC52017EE0318DDBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9CE57C721970FA9BF818793;
+			remoteInfo = "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton";
+		};
+		A6191388BD1D977D3F6ED567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443418ABC52017EE0318DDBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5BA3BB66C368C7F90B8F6C;
+			remoteInfo = "Pods-BAShimmerButton_Tests-BAShimmerButton";
+		};
+		C14241685551D5CE8F76B1AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443418ABC52017EE0318DDBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50EF55086944AF3CE0824B01;
+			remoteInfo = "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F43085D608182E229513805 /* Pods-BAShimmerButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BAShimmerButton_Example.modulemap"; sourceTree = "<group>"; };
+		1C0D9B487808CA60B6288ABA /* Pods_BAShimmerButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAShimmerButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2435A720CD3852AD92D7CAF6 /* Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h"; sourceTree = "<group>"; };
+		25333B16DED6647C69F35BB4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AE620F4E53FA8B4163B37F /* Pods-BAShimmerButton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BAShimmerButton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BAE1EA143209EEA36E1421C /* Pods-BAShimmerButton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Example-umbrella.h"; sourceTree = "<group>"; };
+		2CF41DA8AB110C47DF302E68 /* BAShimmerButton.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAShimmerButton.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3180F6CC234076C595644FA2 /* Pods-BAShimmerButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F13361ECD074BFA7E008470 /* Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m"; sourceTree = "<group>"; };
+		422501D807D21FF706607A8D /* Pods-BAShimmerButton_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4C0F5747EE1953482F8557FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5038F028DF77F79ECC48CBE5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5FF083225A8A971575A6D3F5 /* Pods_BAShimmerButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAShimmerButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61D57EF2322651A28D46E03C /* Pods-BAShimmerButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BAShimmerButton_Tests.modulemap"; sourceTree = "<group>"; };
+		6350085BA4A7DDD6433D3D9F /* Pods-BAShimmerButton_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BAShimmerButton_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig"; sourceTree = "<group>"; };
+		6F3431A00244407D675655E8 /* Pods-BAShimmerButton_Example-BAShimmerButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Example-BAShimmerButton.xcconfig"; sourceTree = "<group>"; };
+		7395C9E21F6D263D873F213D /* Pods-BAShimmerButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Example.release.xcconfig"; sourceTree = "<group>"; };
+		745571053D5737A838114A50 /* Pods-BAShimmerButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		760F4DF72DE022757DA7D390 /* Pods-BAShimmerButton_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BAShimmerButton_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7760D893DB72AEDB72ED3D4C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D0D8058651CD8488F99DEA8 /* Pods-BAShimmerButton_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BAShimmerButton_Example-resources.sh"; sourceTree = "<group>"; };
+		7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig"; sourceTree = "<group>"; };
+		825A7285979E5E127F496997 /* Pods-BAShimmerButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BAShimmerButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		869ACE4D957721C350F47D41 /* BAShimmerButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BAShimmerButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		897641FAAE281C46110CFCA7 /* Pods-BAShimmerButton_Example-BAShimmerButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BAShimmerButton_Example-BAShimmerButton.modulemap"; sourceTree = "<group>"; };
+		8C71382FA74ACC041DDEF986 /* Pods-BAShimmerButton_Tests-BAShimmerButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAShimmerButton_Tests-BAShimmerButton.xcconfig"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton.xcconfig"; sourceTree = "<group>"; };
+		91D9E8567CD623C000084613 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93C160639B9698B589E6F7E4 /* Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap"; sourceTree = "<group>"; };
+		969B2E404BDA41AD3E9CF863 /* Pods-BAShimmerButton_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BAShimmerButton_Example-dummy.m"; sourceTree = "<group>"; };
+		9ADCB038FD08C2751B7956A9 /* Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch"; sourceTree = "<group>"; };
+		9E477E712FE0CC2C9B471569 /* Pods-BAShimmerButton_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BAShimmerButton_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		A01475C73719509C2C72E554 /* Pods-BAShimmerButton_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BAShimmerButton_Tests-resources.sh"; sourceTree = "<group>"; };
+		A9B1BC036E69EEBB65A9A5CA /* Pods-BAShimmerButton_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BAShimmerButton_Tests-dummy.m"; sourceTree = "<group>"; };
+		B3531B0455EE5425466DC424 /* Pods-BAShimmerButton_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BAShimmerButton_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B7E54FBEFCC1DA1909F26E5B /* Pods-BAShimmerButton_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BAShimmerButton_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BEA76A351041F69801A72F24 /* Pods-BAShimmerButton_Example-BAShimmerButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Example-BAShimmerButton-prefix.pch"; sourceTree = "<group>"; };
+		C9D82FDD9AF896A4A0501EDA /* Pods-BAShimmerButton_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Example-environment.h"; sourceTree = "<group>"; };
+		D0D4BCF31B532DB80034AABA /* UIColor+ColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorWithHex.h"; sourceTree = "<group>"; };
+		D0D4BCF41B532DB80034AABA /* UIColor+ColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorWithHex.m"; sourceTree = "<group>"; };
+		D66CADCB39889317D806E1B5 /* BAShimmerButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BAShimmerButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB99D3C907C69B7FA62C725 /* Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h"; sourceTree = "<group>"; };
+		DFD3CFF3813D2486B64B4BB9 /* BAShimmerButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BAShimmerButton.m; sourceTree = "<group>"; };
+		E4E8890AF3C3DBEE2356F1CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Info.plist"; sourceTree = "<group>"; };
+		E82EA372911D56AFBB58718D /* BAShimmerButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BAShimmerButton.h; sourceTree = "<group>"; };
+		EC40177364A4843AE739E5E5 /* BAShimmerButton.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAShimmerButton.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74764FA67F3B4A82A23A8C4 /* Pods-BAShimmerButton_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BAShimmerButton_Tests-environment.h"; sourceTree = "<group>"; };
+		F8B5CB227888E03A992636F8 /* Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m"; path = "../Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00AA883AF2325E109B80DA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB2E7A6F5390292E601A949A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0397DB547C71D7F0816742DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B445D28099DFE26FA1E062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C905D81A72100F6B27A3A646 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF7C8311E224D122CFC46FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB389EAD7754D200E10F444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C72F17E0A1136BA7A4793F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6F11B63D46DB42AE55A5A71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0CDD5D62E59CB2293895F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E2526423E0CCD2541FE7FDC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E82EA372911D56AFBB58718D /* BAShimmerButton.h */,
+				DFD3CFF3813D2486B64B4BB9 /* BAShimmerButton.m */,
+				D0D4BCF31B532DB80034AABA /* UIColor+ColorWithHex.h */,
+				D0D4BCF41B532DB80034AABA /* UIColor+ColorWithHex.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28E8B29664379EA3B960CEF8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DDFA30E4FA01109C112487 /* Pods-BAShimmerButton_Example */,
+				32A3D639F8662089784E9492 /* Pods-BAShimmerButton_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		32A3D639F8662089784E9492 /* Pods-BAShimmerButton_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				25333B16DED6647C69F35BB4 /* Info.plist */,
+				61D57EF2322651A28D46E03C /* Pods-BAShimmerButton_Tests.modulemap */,
+				6350085BA4A7DDD6433D3D9F /* Pods-BAShimmerButton_Tests-acknowledgements.markdown */,
+				B7E54FBEFCC1DA1909F26E5B /* Pods-BAShimmerButton_Tests-acknowledgements.plist */,
+				A9B1BC036E69EEBB65A9A5CA /* Pods-BAShimmerButton_Tests-dummy.m */,
+				F74764FA67F3B4A82A23A8C4 /* Pods-BAShimmerButton_Tests-environment.h */,
+				9E477E712FE0CC2C9B471569 /* Pods-BAShimmerButton_Tests-frameworks.sh */,
+				A01475C73719509C2C72E554 /* Pods-BAShimmerButton_Tests-resources.sh */,
+				422501D807D21FF706607A8D /* Pods-BAShimmerButton_Tests-umbrella.h */,
+				3180F6CC234076C595644FA2 /* Pods-BAShimmerButton_Tests.debug.xcconfig */,
+				825A7285979E5E127F496997 /* Pods-BAShimmerButton_Tests.release.xcconfig */,
+			);
+			name = "Pods-BAShimmerButton_Tests";
+			path = "Target Support Files/Pods-BAShimmerButton_Tests";
+			sourceTree = "<group>";
+		};
+		3C22FB81D176F09DA1E5474D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				91D9E8567CD623C000084613 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		54C730FF9D0844BD32281445 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C22FB81D176F09DA1E5474D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60F28AF7C7908F88CC57FC4B /* BAShimmerButton */ = {
+			isa = PBXGroup;
+			children = (
+				D262590F869DF70AF7AA024C /* Pod */,
+				88FCD75C99ADD7C5B86AA9D3 /* Support Files */,
+			);
+			name = BAShimmerButton;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		831B56579BE6474F780D6B1C = {
+			isa = PBXGroup;
+			children = (
+				5038F028DF77F79ECC48CBE5 /* Podfile */,
+				FC33BDFCF449E271F05196DB /* Development Pods */,
+				54C730FF9D0844BD32281445 /* Frameworks */,
+				83AB2BFD0C846FAC9399E943 /* Products */,
+				28E8B29664379EA3B960CEF8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		83AB2BFD0C846FAC9399E943 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CF41DA8AB110C47DF302E68 /* BAShimmerButton.bundle */,
+				EC40177364A4843AE739E5E5 /* BAShimmerButton.bundle */,
+				D66CADCB39889317D806E1B5 /* BAShimmerButton.framework */,
+				869ACE4D957721C350F47D41 /* BAShimmerButton.framework */,
+				5FF083225A8A971575A6D3F5 /* Pods_BAShimmerButton_Example.framework */,
+				1C0D9B487808CA60B6288ABA /* Pods_BAShimmerButton_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88FCD75C99ADD7C5B86AA9D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7760D893DB72AEDB72ED3D4C /* Info.plist */,
+				E4E8890AF3C3DBEE2356F1CF /* Info.plist */,
+				897641FAAE281C46110CFCA7 /* Pods-BAShimmerButton_Example-BAShimmerButton.modulemap */,
+				6F3431A00244407D675655E8 /* Pods-BAShimmerButton_Example-BAShimmerButton.xcconfig */,
+				7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */,
+				3F13361ECD074BFA7E008470 /* Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m */,
+				BEA76A351041F69801A72F24 /* Pods-BAShimmerButton_Example-BAShimmerButton-prefix.pch */,
+				DCB99D3C907C69B7FA62C725 /* Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h */,
+				93C160639B9698B589E6F7E4 /* Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap */,
+				8C71382FA74ACC041DDEF986 /* Pods-BAShimmerButton_Tests-BAShimmerButton.xcconfig */,
+				6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */,
+				F8B5CB227888E03A992636F8 /* Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m */,
+				9ADCB038FD08C2751B7956A9 /* Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch */,
+				2435A720CD3852AD92D7CAF6 /* Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton";
+			sourceTree = "<group>";
+		};
+		A3DDFA30E4FA01109C112487 /* Pods-BAShimmerButton_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4C0F5747EE1953482F8557FB /* Info.plist */,
+				0F43085D608182E229513805 /* Pods-BAShimmerButton_Example.modulemap */,
+				760F4DF72DE022757DA7D390 /* Pods-BAShimmerButton_Example-acknowledgements.markdown */,
+				27AE620F4E53FA8B4163B37F /* Pods-BAShimmerButton_Example-acknowledgements.plist */,
+				969B2E404BDA41AD3E9CF863 /* Pods-BAShimmerButton_Example-dummy.m */,
+				C9D82FDD9AF896A4A0501EDA /* Pods-BAShimmerButton_Example-environment.h */,
+				B3531B0455EE5425466DC424 /* Pods-BAShimmerButton_Example-frameworks.sh */,
+				7D0D8058651CD8488F99DEA8 /* Pods-BAShimmerButton_Example-resources.sh */,
+				2BAE1EA143209EEA36E1421C /* Pods-BAShimmerButton_Example-umbrella.h */,
+				745571053D5737A838114A50 /* Pods-BAShimmerButton_Example.debug.xcconfig */,
+				7395C9E21F6D263D873F213D /* Pods-BAShimmerButton_Example.release.xcconfig */,
+			);
+			name = "Pods-BAShimmerButton_Example";
+			path = "Target Support Files/Pods-BAShimmerButton_Example";
+			sourceTree = "<group>";
+		};
+		D262590F869DF70AF7AA024C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1E2526423E0CCD2541FE7FDC /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		FC33BDFCF449E271F05196DB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60F28AF7C7908F88CC57FC4B /* BAShimmerButton */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2037FAAE58CC473EDDD71A58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0732734F49BB9B88D3A115CA /* BAShimmerButton.h in Headers */,
+				E38555BC40B64883C467CDFE /* Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A252B4F969C18D4CA0203B58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31361D59BE5EEE66CE5BB53D /* BAShimmerButton.h in Headers */,
+				1802444AF1D233617785CBC1 /* Pods-BAShimmerButton_Example-BAShimmerButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D141F36F2BC0015256232AD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D4BCF51B532DB80034AABA /* UIColor+ColorWithHex.h in Headers */,
+				0F9224F0044C4FE7632BDCF4 /* Pods-BAShimmerButton_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE44E20CF680C83B40FBABC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C30655770772B8BE514AFE /* Pods-BAShimmerButton_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B854F1E7EC3A3197F3389C4 /* Pods-BAShimmerButton_Example-BAShimmerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C545261AA761726FB5EA0CD4 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example-BAShimmerButton" */;
+			buildPhases = (
+				C39D41F75D85226A8099BA2A /* Sources */,
+				CDB389EAD7754D200E10F444 /* Frameworks */,
+				33CCCCC1A1DB957BA751A9AB /* Resources */,
+				A252B4F969C18D4CA0203B58 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01FBD8B399B3693D64D22938 /* PBXTargetDependency */,
+			);
+			name = "Pods-BAShimmerButton_Example-BAShimmerButton";
+			productName = "Pods-BAShimmerButton_Example-BAShimmerButton";
+			productReference = D66CADCB39889317D806E1B5 /* BAShimmerButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		50EF55086944AF3CE0824B01 /* Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8084EC9A9E6BA55D812B1B18 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton" */;
+			buildPhases = (
+				65FDCE53EE67B177BC421502 /* Sources */,
+				9DF7C8311E224D122CFC46FF /* Frameworks */,
+				6D88400BD3B7166707B5E307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton";
+			productName = "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton";
+			productReference = EC40177364A4843AE739E5E5 /* BAShimmerButton.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5A5BA3BB66C368C7F90B8F6C /* Pods-BAShimmerButton_Tests-BAShimmerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F3DEA22754ED2D0CEF6FF1 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests-BAShimmerButton" */;
+			buildPhases = (
+				0574FAE12BCC0EE75AFBB2F0 /* Sources */,
+				F6F11B63D46DB42AE55A5A71 /* Frameworks */,
+				5C1F9E6F830EA146410F79CC /* Resources */,
+				2037FAAE58CC473EDDD71A58 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CC41E838FF6CF669195F870 /* PBXTargetDependency */,
+			);
+			name = "Pods-BAShimmerButton_Tests-BAShimmerButton";
+			productName = "Pods-BAShimmerButton_Tests-BAShimmerButton";
+			productReference = 869ACE4D957721C350F47D41 /* BAShimmerButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B5740099FB68FB185320E53 /* Pods-BAShimmerButton_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2429F674718C364E5214E33D /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests" */;
+			buildPhases = (
+				2B86D26F79AE65B180F753C9 /* Sources */,
+				00AA883AF2325E109B80DA23 /* Frameworks */,
+				FEE44E20CF680C83B40FBABC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59B83C47CDFBF6B5BE20CE0C /* PBXTargetDependency */,
+			);
+			name = "Pods-BAShimmerButton_Tests";
+			productName = "Pods-BAShimmerButton_Tests";
+			productReference = 1C0D9B487808CA60B6288ABA /* Pods_BAShimmerButton_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AD55DE078BCEF62314A69B92 /* Pods-BAShimmerButton_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180C89AEB2441B112153FAF1 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example" */;
+			buildPhases = (
+				4EED98CCBA7E37569BD18398 /* Sources */,
+				84B445D28099DFE26FA1E062 /* Frameworks */,
+				D141F36F2BC0015256232AD2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25FCD6CF437D3510918EDE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-BAShimmerButton_Example";
+			productName = "Pods-BAShimmerButton_Example";
+			productReference = 5FF083225A8A971575A6D3F5 /* Pods_BAShimmerButton_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9CE57C721970FA9BF818793 /* Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB615083C59104BBD0F5C021 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton" */;
+			buildPhases = (
+				4E296F1137032EEEA56A2A86 /* Sources */,
+				0397DB547C71D7F0816742DC /* Frameworks */,
+				0F98DB14857865AFCBC240A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton";
+			productName = "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton";
+			productReference = 2CF41DA8AB110C47DF302E68 /* BAShimmerButton.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		443418ABC52017EE0318DDBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 7B5F3468B33C395655B7FB7F /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 831B56579BE6474F780D6B1C;
+			productRefGroup = 83AB2BFD0C846FAC9399E943 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD55DE078BCEF62314A69B92 /* Pods-BAShimmerButton_Example */,
+				4B854F1E7EC3A3197F3389C4 /* Pods-BAShimmerButton_Example-BAShimmerButton */,
+				50EF55086944AF3CE0824B01 /* Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton */,
+				7B5740099FB68FB185320E53 /* Pods-BAShimmerButton_Tests */,
+				5A5BA3BB66C368C7F90B8F6C /* Pods-BAShimmerButton_Tests-BAShimmerButton */,
+				C9CE57C721970FA9BF818793 /* Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F98DB14857865AFCBC240A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CCCCC1A1DB957BA751A9AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A0451E28B3A498CA6AEE74 /* BAShimmerButton.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1F9E6F830EA146410F79CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CE6F9FB9D04095691977AA /* BAShimmerButton.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D88400BD3B7166707B5E307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0574FAE12BCC0EE75AFBB2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B25A98960B7B591B8C1BC83 /* BAShimmerButton.m in Sources */,
+				D24460AF69C0ABA73488FB59 /* Pods-BAShimmerButton_Tests-BAShimmerButton-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B86D26F79AE65B180F753C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4EBC6D148A3E98D28B8F2A1 /* Pods-BAShimmerButton_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E296F1137032EEEA56A2A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EED98CCBA7E37569BD18398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65403985332AE25043DE6A98 /* Pods-BAShimmerButton_Example-dummy.m in Sources */,
+				D0D4BCF61B532DB80034AABA /* UIColor+ColorWithHex.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65FDCE53EE67B177BC421502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39D41F75D85226A8099BA2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973418128445EFF029894359 /* BAShimmerButton.m in Sources */,
+				7772438E7F7EA3942A99FF6E /* Pods-BAShimmerButton_Example-BAShimmerButton-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01FBD8B399B3693D64D22938 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton";
+			target = 50EF55086944AF3CE0824B01 /* Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton */;
+			targetProxy = C14241685551D5CE8F76B1AD /* PBXContainerItemProxy */;
+		};
+		59B83C47CDFBF6B5BE20CE0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BAShimmerButton_Tests-BAShimmerButton";
+			target = 5A5BA3BB66C368C7F90B8F6C /* Pods-BAShimmerButton_Tests-BAShimmerButton */;
+			targetProxy = A6191388BD1D977D3F6ED567 /* PBXContainerItemProxy */;
+		};
+		6CC41E838FF6CF669195F870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton";
+			target = C9CE57C721970FA9BF818793 /* Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton */;
+			targetProxy = 8FA4E8CCB3699B1429FE3ECE /* PBXContainerItemProxy */;
+		};
+		D25FCD6CF437D3510918EDE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BAShimmerButton_Example-BAShimmerButton";
+			target = 4B854F1E7EC3A3197F3389C4 /* Pods-BAShimmerButton_Example-BAShimmerButton */;
+			targetProxy = 5C34B4D77F60C62FA2138B8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		011A00502D201B3B594CC53D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		19C6315C54602603B0DA747B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22791EA195A41C3A9894C5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BAShimmerButton_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		36923BE4F982CB4EA5E8B7C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Pods-BAShimmerButton_Example-BAShimmerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Pods-BAShimmerButton_Example-BAShimmerButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3F1E9EE9E10B50E726B8BAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3180F6CC234076C595644FA2 /* Pods-BAShimmerButton_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Tests/Pods-BAShimmerButton_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BAShimmerButton_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51325463357FED060846A504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745571053D5737A838114A50 /* Pods-BAShimmerButton_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Example/Pods-BAShimmerButton_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BAShimmerButton_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		749BF5114314082CB3CF6485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BAShimmerButton_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7F16D80617518774A0820492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Tests-BAShimmerButton/Pods-BAShimmerButton_Tests-BAShimmerButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		892996298DCF66668650A1C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		96C87AF9AAFB74D019C7FE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7395C9E21F6D263D873F213D /* Pods-BAShimmerButton_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Example/Pods-BAShimmerButton_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BAShimmerButton_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A62AD5073103BA63B6DDBB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6394FAAF0B3BBACF4A1F1BAF /* Pods-BAShimmerButton_Tests-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BAShimmerButton_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AED1633DC88A7D30927848F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825A7285979E5E127F496997 /* Pods-BAShimmerButton_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Tests/Pods-BAShimmerButton_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BAShimmerButton_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B5451835101F8B28E312152E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Pods-BAShimmerButton_Example-BAShimmerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BAShimmerButton_Example-BAShimmerButton/Pods-BAShimmerButton_Example-BAShimmerButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3C81BA77B2F29E3B818D6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2F1FE5CEC2863882E94C58 /* Pods-BAShimmerButton_Example-BAShimmerButton-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-BAShimmerButton_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = BAShimmerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		180C89AEB2441B112153FAF1 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51325463357FED060846A504 /* Debug */,
+				96C87AF9AAFB74D019C7FE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2429F674718C364E5214E33D /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1E9EE9E10B50E726B8BAC9 /* Debug */,
+				AED1633DC88A7D30927848F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5F3468B33C395655B7FB7F /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892996298DCF66668650A1C0 /* Debug */,
+				19C6315C54602603B0DA747B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8084EC9A9E6BA55D812B1B18 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3C81BA77B2F29E3B818D6FC /* Debug */,
+				22791EA195A41C3A9894C5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F3DEA22754ED2D0CEF6FF1 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests-BAShimmerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F16D80617518774A0820492 /* Debug */,
+				011A00502D201B3B594CC53D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C545261AA761726FB5EA0CD4 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Example-BAShimmerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5451835101F8B28E312152E /* Debug */,
+				36923BE4F982CB4EA5E8B7C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB615083C59104BBD0F5C021 /* Build configuration list for PBXNativeTarget "Pods-BAShimmerButton_Tests-BAShimmerButton-BAShimmerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749BF5114314082CB3CF6485 /* Debug */,
+				A62AD5073103BA63B6DDBB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 443418ABC52017EE0318DDBD /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module BAShimmerButton {
+  umbrella header "Pods-BAShimmerButton_Tests-BAShimmerButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
