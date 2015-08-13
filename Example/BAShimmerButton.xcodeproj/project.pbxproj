@@ -155,16 +155,16 @@
 				6003F5A6195388D20070C39A /* BAViewController.m */,
 				D0F088A71B7C47A50088B2F2 /* BAStrokeTextLabel.h */,
 				D0F088A81B7C47A50088B2F2 /* BAStrokeTextLabel.m */,
+				D0F088B11B7C61440088B2F2 /* BABackgroundUIView.h */,
+				D0F088B21B7C61440088B2F2 /* BABackgroundUIView.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				D0F088AF1B7C60FD0088B2F2 /* LaunchScreen.xib */,
 				D038B6C81B542992007B831E /* BebasNeue Bold.ttf */,
 				D038B6C91B542992007B831E /* BebasNeue Book.ttf */,
 				D038B6CA1B542992007B831E /* BebasNeue Light.ttf */,
 				D038B6CB1B542992007B831E /* BebasNeue Regular.ttf */,
 				D038B6CC1B542992007B831E /* BebasNeue Thin.ttf */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				D0F088AF1B7C60FD0088B2F2 /* LaunchScreen.xib */,
-				D0F088B11B7C61440088B2F2 /* BABackgroundUIView.h */,
-				D0F088B21B7C61440088B2F2 /* BABackgroundUIView.m */,
 			);
 			name = "Example for BAShimmerButton";
 			path = BAShimmerButton;
