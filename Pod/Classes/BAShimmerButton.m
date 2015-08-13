@@ -25,8 +25,10 @@
 
 @interface BAShimmerButton ()
 
+//main shimmer layer
 @property (strong, nonatomic) CAGradientLayer *gradientLayer;
 
+//tracking for whether the button is on or off
 @property (assign, nonatomic) bool onState;
 
 //Properties for icon on and off states
@@ -53,6 +55,7 @@
     
     if (self)
     {
+        //sets defaults values
         [self initialize];
         
     }
@@ -64,6 +67,7 @@
     
     if (self)
     {
+        //sets defaults values
         [self initialize];
     }
     return self;
@@ -73,16 +77,13 @@
 
 - (void)setShimmerDuration:(CGFloat)shimmerDuration {
     _shimmerDuration = shimmerDuration;
-    [self shimmerOff];
-    self.shimmerAnimation.duration = shimmerDuration;
-    [self shimmerOn];
+    [self createShimmerAnimation];
 }
 
 - (void)setShimmerColor:(UIColor *)shimmerColor {
     _shimmerColor = shimmerColor;
-    [self shimmerOff];
     self.gradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)_shimmerColor.CGColor,(id)[UIColor clearColor].CGColor];
-    [self shimmerOn];
+    [self createShimmerAnimation];
 }
 
 - (void)setShimmerDirection:(BAShimmerDirection)shimmerDirection {
@@ -131,20 +132,24 @@
 #pragma mark - Private
 
 - (void)createShimmerAnimation {
+    if (self.gradientLayer) {
+        [self shimmerOff];
+        self.gradientLayer= nil;
+    }
     self.gradientLayer = [CAGradientLayer layer];
     self.gradientLayer.frame = self.bounds;
     
-    //set gradient for shimmer
+    //assign the shimmer the color chosen and vary opacity
     self.gradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)self.shimmerColor.CGColor, (id)[UIColor clearColor].CGColor];
     
-    //Space out the gradient based on width
+    //spaces out the gradient based on width
     NSArray *startLocations = @[@0.0f, @(self.gradientSize / 2), @(self.gradientSize)];
     NSArray *endLocations = @[@(1.0f - self.gradientSize), @(1.0f - (self.gradientSize / 2)), @1.0f];
-    
     self.gradientLayer.locations = startLocations;
-    [self setGradientDirection];
     
-    //Shimmering button properties
+    //choose orientation
+    [self setGradientDirection];
+
     self.shimmerAnimation = [CABasicAnimation animationWithKeyPath:@"locations"];
     self.shimmerAnimation.fromValue = startLocations;
     self.shimmerAnimation.toValue = endLocations;
@@ -155,15 +160,14 @@
 - (void)initialize {
     
     //default values
-    _shimmerDuration = 1.0f;
+    _shimmerDuration = 2.0f;
     _shimmerDirection = BAShimmerDirectionDiagonalLeftToRight;
     _shimmerColor = [UIColor colorWithHex:0x5A6363];
-    _gradientSize = 30.0f / CGRectGetWidth(self.frame);
+    _gradientSize = 0.5;
     self.onState = NO;
     [self setGradientDirection];
     [self createShimmerAnimation];
     
-    [self.layer addSublayer:self.gradientLayer];
     [self shimmerOn];
 
     
@@ -232,8 +236,8 @@
         shrinkAnimation.fillMode = kCAFillModeForwards;
         shrinkAnimation.removedOnCompletion = NO;
         shrinkAnimation.toValue= @0.0;
-        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
         
+        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
         self.onState = NO;
         [self shimmerOn];
     }
@@ -258,11 +262,19 @@
 }
 
 - (void)shimmerOn {
+    //make sure to insert layer UNDER icon (only when off)
+    if (self.iconOffLayer) {
+        [self.layer insertSublayer:self.gradientLayer below:self.iconOffLayer];
+    }
+    else {
+        [self.layer addSublayer:self.gradientLayer];
+    }
     [self.gradientLayer addAnimation:self.shimmerAnimation forKey:@"animateGradient"];
 }
 
 - (void)shimmerOff {
     [self.gradientLayer removeAnimationForKey:@"animateGradient"];
+    [self.gradientLayer removeFromSuperlayer];
 }
 
 #pragma mark - Public
@@ -270,7 +282,12 @@
 - (void)showButtonWithAnimation:(bool)animated {
     self.alpha = 1.0f;
     if(animated){
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            [self shimmerOn];
+        }];
         [self.layer addAnimation:self.showButtonAnimationGroup forKey:@"showButton"];
+        [CATransaction commit];
     }
 }
 
@@ -313,6 +330,7 @@
     self.iconOnLayer.position = CGPointMake(CGRectGetWidth(self.bounds)/2,CGRectGetHeight(self.bounds)/2);
     self.iconOnLayer.contents = (id)self.iconImage.CGImage;
     
+    //this serves as more of a mask and serves as the animation
     self.innerOnIconLayer = [CAShapeLayer layer];
     UIBezierPath *circularPath=[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, CGRectGetWidth(self.frame),CGRectGetHeight(self.frame)) cornerRadius:MAX(CGRectGetWidth(self.frame)/2,CGRectGetHeight(self.frame)/2)];
     self.innerOnIconLayer.path = circularPath.CGPath;

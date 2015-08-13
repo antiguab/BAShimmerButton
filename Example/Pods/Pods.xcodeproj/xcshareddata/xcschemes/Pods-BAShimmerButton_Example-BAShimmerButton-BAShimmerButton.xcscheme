@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50EF55086944AF3CE0824B01"
+               BlueprintIdentifier = "9150D43BD1A982EC6EB26B7F"
                BuildableName = "BAShimmerButton.bundle"
                BlueprintName = "Pods-BAShimmerButton_Example-BAShimmerButton-BAShimmerButton"
                ReferencedContainer = "container:Pods.xcodeproj">

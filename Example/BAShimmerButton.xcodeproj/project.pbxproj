@@ -23,6 +23,14 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		7EC09564506E888565C639FA /* Pods_BAShimmerButton_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BC8AC0C90EE624CD0C42D9 /* Pods_BAShimmerButton_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D063624C1B747D3600936DF2 /* BebasNeue Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038B6C81B542992007B831E /* BebasNeue Bold.ttf */; };
+		D0CACE331B587BC700A82A76 /* BebasNeue Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038B6CA1B542992007B831E /* BebasNeue Light.ttf */; };
+		D0CACE341B587BC700A82A76 /* BebasNeue Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038B6CB1B542992007B831E /* BebasNeue Regular.ttf */; };
+		D0CACE351B587BC700A82A76 /* BebasNeue Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038B6CC1B542992007B831E /* BebasNeue Thin.ttf */; };
+		D0F088A61B7C443E0088B2F2 /* BebasNeue Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038B6C91B542992007B831E /* BebasNeue Book.ttf */; };
+		D0F088A91B7C47A50088B2F2 /* BAStrokeTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F088A81B7C47A50088B2F2 /* BAStrokeTextLabel.m */; };
+		D0F088B01B7C60FD0088B2F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F088AF1B7C60FD0088B2F2 /* LaunchScreen.xib */; };
+		D0F088B31B7C61440088B2F2 /* BABackgroundUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F088B21B7C61440088B2F2 /* BABackgroundUIView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,11 @@
 		D038B6CA1B542992007B831E /* BebasNeue Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.ttf"; sourceTree = "<group>"; };
 		D038B6CB1B542992007B831E /* BebasNeue Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.ttf"; sourceTree = "<group>"; };
 		D038B6CC1B542992007B831E /* BebasNeue Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.ttf"; sourceTree = "<group>"; };
+		D0F088A71B7C47A50088B2F2 /* BAStrokeTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAStrokeTextLabel.h; sourceTree = "<group>"; };
+		D0F088A81B7C47A50088B2F2 /* BAStrokeTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAStrokeTextLabel.m; sourceTree = "<group>"; };
+		D0F088AF1B7C60FD0088B2F2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		D0F088B11B7C61440088B2F2 /* BABackgroundUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BABackgroundUIView.h; sourceTree = "<group>"; };
+		D0F088B21B7C61440088B2F2 /* BABackgroundUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABackgroundUIView.m; sourceTree = "<group>"; };
 		FC7BABED92535258080DBDEB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +153,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* BAViewController.h */,
 				6003F5A6195388D20070C39A /* BAViewController.m */,
+				D0F088A71B7C47A50088B2F2 /* BAStrokeTextLabel.h */,
+				D0F088A81B7C47A50088B2F2 /* BAStrokeTextLabel.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				D038B6C81B542992007B831E /* BebasNeue Bold.ttf */,
 				D038B6C91B542992007B831E /* BebasNeue Book.ttf */,
@@ -147,6 +162,9 @@
 				D038B6CB1B542992007B831E /* BebasNeue Regular.ttf */,
 				D038B6CC1B542992007B831E /* BebasNeue Thin.ttf */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				D0F088AF1B7C60FD0088B2F2 /* LaunchScreen.xib */,
+				D0F088B11B7C61440088B2F2 /* BABackgroundUIView.h */,
+				D0F088B21B7C61440088B2F2 /* BABackgroundUIView.m */,
 			);
 			name = "Example for BAShimmerButton";
 			path = BAShimmerButton;
@@ -286,6 +304,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F088A61B7C443E0088B2F2 /* BebasNeue Book.ttf in Resources */,
+				D063624C1B747D3600936DF2 /* BebasNeue Bold.ttf in Resources */,
+				D0F088B01B7C60FD0088B2F2 /* LaunchScreen.xib in Resources */,
+				D0CACE331B587BC700A82A76 /* BebasNeue Light.ttf in Resources */,
+				D0CACE341B587BC700A82A76 /* BebasNeue Regular.ttf in Resources */,
+				D0CACE351B587BC700A82A76 /* BebasNeue Thin.ttf in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -400,8 +424,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F088B31B7C61440088B2F2 /* BABackgroundUIView.m in Sources */,
 				6003F59E195388D20070C39A /* BAAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* BAViewController.m in Sources */,
+				D0F088A91B7C47A50088B2F2 /* BAStrokeTextLabel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

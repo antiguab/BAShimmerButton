@@ -1,4 +1,4 @@
- //The MIT License (MIT)
+//The MIT License (MIT)
 //
 //Copyright (c) 2015 Bryan Antigua <antigua.b@gmail.com>
 //
@@ -19,18 +19,25 @@
 //LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
-
-@import UIKit;
-#import <BAShimmerButton/BAShimmerButton.h>
 #import "BAStrokeTextLabel.h"
 
-@interface BAViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIView *OuterContainerView;
-@property (strong, nonatomic) IBOutlet UIView *InnerContainerView;
+@implementation BAStrokeTextLabel
 
-@property (strong, nonatomic) IBOutlet BAStrokeTextLabel *titleLabel;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonExamples;
-
-- (IBAction)buttonPressed:(id)sender;
+//creates the stroke border around the text
+- (void)drawTextInRect:(CGRect)rect {
+    UIColor *borderColor = [UIColor blackColor];
+    UIColor *fillColor = self.textColor;
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineWidth(context, 2.0f);
+    CGContextSetTextDrawingMode(context, kCGTextStroke);
+    self.textColor = borderColor;
+    [super drawTextInRect:rect];
+    
+    CGContextSetLineWidth(context, 0.0f);
+    CGContextSetTextDrawingMode(context, kCGTextFillStroke);
+    self.textColor = fillColor;
+    [super drawTextInRect:rect];
+}
 
 @end

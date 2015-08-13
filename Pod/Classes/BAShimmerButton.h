@@ -22,6 +22,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Enum for different shimmering orientation and direction
+ */
 typedef NS_ENUM(NSInteger,BAShimmerDirection) {
     BAShimmerDirectionTopToBottom,
     BAShimmerDirectionBottomToTop,
@@ -33,19 +36,59 @@ typedef NS_ENUM(NSInteger,BAShimmerDirection) {
 
 @interface BAShimmerButton : UIButton
 
+/**
+ UIColor for the Main portion of the gradient (goes from clear -> color -> clear)
+ */
 @property (strong, nonatomic) UIColor *shimmerColor;
+
+/**
+ Image that can be used in the center of the button, also used as the mask for the off state
+ */
 @property (strong, nonatomic) UIImage *iconImage;
+
+/**
+ UIColor for the off state mask, if available
+ */
 @property (strong, nonatomic) UIColor *iconOffImageColor;
 
-
+/**
+ Duration for one shimmer
+ */
 @property (assign, nonatomic) CGFloat shimmerDuration;
+
+/**
+Enum value for shimmering orientation and direction
+ */
 @property (assign, nonatomic) BAShimmerDirection shimmerDirection;
+
+/**
+ CGFloat to determine the total width of the gradient (between 0 - 1)
+ */
 @property (assign, nonatomic) CGFloat gradientSize;
 
-
+/**
+Turns the button from the on position to off or vice versa. The off -> on state involves turning off the shimmer and animating an icon if avaiable. The off -> on state involved turning on the shimmer and animating the icon in the reverse diretion
+*/
 - (void)toggleButton;
-- (void)initialize;
+
+/**
+Starts a growing animation for showing the button. You can choose to skip the animation
+ 
+ @param animated
+ Boolean for determining whether to animate and show or just show the button
+ */
 - (void)showButtonWithAnimation:(bool)animated;
+
+/**
+ Starts a shrinking animation for hiding the button. You can choose to skip the animation
+ 
+ @param animated
+ Boolean for determining whether to animate and hide or hide show the button
+ */
 - (void)hideButtonWithAnimation:(bool)animated;
+
+/**
+ Animation that makes the button wiggle up and down
+ */
 - (void)wiggleButton;
 @end

@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BAShimmerButton: 065d5f683646183dc9d552cd499374febe927379
+  BAShimmerButton: c19236adf26760c4632e45cbbdc4a630051efb48
 
 COCOAPODS: 0.37.2

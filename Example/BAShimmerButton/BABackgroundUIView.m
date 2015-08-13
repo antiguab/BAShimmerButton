@@ -1,4 +1,5 @@
- //The MIT License (MIT)
+//
+//The MIT License (MIT)
 //
 //Copyright (c) 2015 Bryan Antigua <antigua.b@gmail.com>
 //
@@ -20,17 +21,23 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-@import UIKit;
-#import <BAShimmerButton/BAShimmerButton.h>
-#import "BAStrokeTextLabel.h"
+#import "BABackgroundUIView.h"
+#import "UIColor+colorWithHex.h"
 
-@interface BAViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIView *OuterContainerView;
-@property (strong, nonatomic) IBOutlet UIView *InnerContainerView;
+@implementation BABackgroundUIView
 
-@property (strong, nonatomic) IBOutlet BAStrokeTextLabel *titleLabel;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonExamples;
+#pragma mark - Lifecycle
 
-- (IBAction)buttonPressed:(id)sender;
-
+- (void)layoutSubviews {
+    
+    [super layoutSubviews];
+    //creates a neat gradient
+    CAGradientLayer *tempLayer = [CAGradientLayer layer];
+    tempLayer.frame = self.bounds;
+    tempLayer.colors = @[(id)[UIColor colorWithHex:0x61f5e3].CGColor, (id)[UIColor colorWithHex:0x74bfd4].CGColor,(id)[UIColor colorWithHex:0x79b6d2].CGColor,(id)[UIColor colorWithHex:0xa94eb8].CGColor];
+    tempLayer.locations = @[[NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:0.7f], [NSNumber numberWithFloat:0.8f],[NSNumber numberWithFloat:1.0f]];
+    tempLayer.startPoint = CGPointMake(0, 0);
+    tempLayer.endPoint = CGPointMake(0, 1);
+    [self.layer insertSublayer:tempLayer atIndex:0];
+}
 @end

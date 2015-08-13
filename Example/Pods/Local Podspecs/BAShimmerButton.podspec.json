@@ -1,25 +1,27 @@
 {
   "name": "BAShimmerButton",
   "version": "0.1.0",
-  "summary": "A short description of BAShimmerButton.",
-  "description": "                       An optional longer description of BAShimmerButton\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/BAShimmerButton",
+  "summary": "A call-to-action button that offers shimmer, movement, and off/on functionality",
+  "description": "                        A call-to-action button that offers shimmer, movement, and off/on functionality. Great for getting a users attention in multiple ways!\n                        more info at: [https://github.com/antiguab/BAShimmerButton(https://github.com/antiguab/BAShimmerButton)\n",
+  "homepage": "https://github.com/antiguab/BAShimmerButton",
   "license": "MIT",
   "authors": {
     "Bryan Antigua": "antigua.b@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/BAShimmerButton.git",
+    "git": "https://github.com/antiguab/BAShimmerButton.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": null
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "Pod/Classes",
   "resource_bundles": {
     "BAShimmerButton": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": "UIKit"
 }

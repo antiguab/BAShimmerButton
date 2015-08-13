@@ -1,4 +1,4 @@
- //The MIT License (MIT)
+//The MIT License (MIT)
 //
 //Copyright (c) 2015 Bryan Antigua <antigua.b@gmail.com>
 //
@@ -20,17 +20,8 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-@import UIKit;
-#import <BAShimmerButton/BAShimmerButton.h>
-#import "BAStrokeTextLabel.h"
+#import <UIKit/UIKit.h>
 
-@interface BAViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIView *OuterContainerView;
-@property (strong, nonatomic) IBOutlet UIView *InnerContainerView;
-
-@property (strong, nonatomic) IBOutlet BAStrokeTextLabel *titleLabel;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonExamples;
-
-- (IBAction)buttonPressed:(id)sender;
+@interface BABackgroundUIView : UIView
 
 @end
