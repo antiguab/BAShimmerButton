@@ -220,47 +220,6 @@
     
 }
 
-
-- (void)toggleButton {
-    
-    //In case button gets pressed mid animation
-    CGFloat currentScaleValue = [[self.innerOnIconLayer.presentationLayer valueForKeyPath: @"transform.scale"] floatValue];
-    
-    //if on, turn off
-    if (self.onState) {
-        [self.innerOnIconLayer removeAnimationForKey:@"growingInner"];
-        CABasicAnimation *shrinkAnimation;
-        shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        shrinkAnimation.duration=1.0f;
-        shrinkAnimation.fromValue= @(currentScaleValue);
-        shrinkAnimation.fillMode = kCAFillModeForwards;
-        shrinkAnimation.removedOnCompletion = NO;
-        shrinkAnimation.toValue= @0.0;
-        
-        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
-        self.onState = NO;
-        [self shimmerOn];
-    }
-    
-    //if off turn on
-    else {
-        [self shimmerOff];
-        CABasicAnimation *growAnimation;
-        [self.innerOnIconLayer removeAnimationForKey:@"shrinkingInner"];
-        growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        growAnimation.duration=1.0f;
-        growAnimation.fromValue= @(currentScaleValue);
-        growAnimation.fillMode = kCAFillModeForwards;
-        growAnimation.removedOnCompletion = NO;
-        growAnimation.toValue= @1.0;
-        
-        self.onState = YES;
-        [self.innerOnIconLayer addAnimation:growAnimation forKey:@"growingInner"];
-    }
-    
-    
-}
-
 - (void)shimmerOn {
     //make sure to insert layer UNDER icon (only when off)
     if (self.iconOffLayer) {
@@ -276,35 +235,6 @@
     [self.gradientLayer removeAnimationForKey:@"animateGradient"];
     [self.gradientLayer removeFromSuperlayer];
 }
-
-#pragma mark - Public
-
-- (void)showButtonWithAnimation:(bool)animated {
-    self.alpha = 1.0f;
-    if(animated){
-        [CATransaction begin];
-        [CATransaction setCompletionBlock:^{
-            [self shimmerOn];
-        }];
-        [self.layer addAnimation:self.showButtonAnimationGroup forKey:@"showButton"];
-        [CATransaction commit];
-    }
-}
-
-- (void)hideButtonWithAnimation:(bool)animated {
-    if(animated){
-        [CATransaction begin];
-        [CATransaction setCompletionBlock:^{
-            self.alpha = 0.0f;
-        }];
-        [self.layer addAnimation:self.groupHideAnimationGroup forKey:@"hideButton"];
-        [CATransaction commit];
-    }
-    else {
-        self.alpha = 0.0f;
-    }
-}
-
 
 - (void)createIconImages {
     
@@ -334,7 +264,7 @@
     self.innerOnIconLayer = [CAShapeLayer layer];
     UIBezierPath *circularPath=[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, CGRectGetWidth(self.frame),CGRectGetHeight(self.frame)) cornerRadius:MAX(CGRectGetWidth(self.frame)/2,CGRectGetHeight(self.frame)/2)];
     self.innerOnIconLayer.path = circularPath.CGPath;
-
+    
     self.innerOnIconLayer.frame = self.frame;
     self.innerOnIconLayer.position = CGPointMake(CGRectGetWidth(self.iconOnLayer.frame)/2,CGRectGetHeight(self.iconOnLayer.frame)/2);
     self.iconOnLayer.mask = self.innerOnIconLayer;
@@ -386,6 +316,34 @@
     }
 }
 
+#pragma mark - Public
+
+- (void)showButtonWithAnimation:(bool)animated {
+    self.alpha = 1.0f;
+    if(animated){
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            [self shimmerOn];
+        }];
+        [self.layer addAnimation:self.showButtonAnimationGroup forKey:@"showButton"];
+        [CATransaction commit];
+    }
+}
+
+- (void)hideButtonWithAnimation:(bool)animated {
+    if(animated){
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            self.alpha = 0.0f;
+        }];
+        [self.layer addAnimation:self.groupHideAnimationGroup forKey:@"hideButton"];
+        [CATransaction commit];
+    }
+    else {
+        self.alpha = 0.0f;
+    }
+}
+
 - (void)wiggleButton {
     self.animator = [[UIDynamicAnimator alloc] init];
     UIAttachmentBehavior *buttonAnchor = [[UIAttachmentBehavior alloc] initWithItem:self attachedToAnchor:self.center];
@@ -401,4 +359,45 @@
     [self.animator addBehavior:buttonProperties];
 }
 
+
+
+- (void)toggleButton {
+    
+    //In case button gets pressed mid animation
+    CGFloat currentScaleValue = [[self.innerOnIconLayer.presentationLayer valueForKeyPath: @"transform.scale"] floatValue];
+    
+    //if on, turn off
+    if (self.onState) {
+        [self.innerOnIconLayer removeAnimationForKey:@"growingInner"];
+        CABasicAnimation *shrinkAnimation;
+        shrinkAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        shrinkAnimation.duration=1.0f;
+        shrinkAnimation.fromValue= @(currentScaleValue);
+        shrinkAnimation.fillMode = kCAFillModeForwards;
+        shrinkAnimation.removedOnCompletion = NO;
+        shrinkAnimation.toValue= @0.0;
+        
+        [self.innerOnIconLayer addAnimation:shrinkAnimation forKey:@"shrinkingInner"];
+        self.onState = NO;
+        [self shimmerOn];
+    }
+    
+    //if off turn on
+    else {
+        [self shimmerOff];
+        CABasicAnimation *growAnimation;
+        [self.innerOnIconLayer removeAnimationForKey:@"shrinkingInner"];
+        growAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        growAnimation.duration=1.0f;
+        growAnimation.fromValue= @(currentScaleValue);
+        growAnimation.fillMode = kCAFillModeForwards;
+        growAnimation.removedOnCompletion = NO;
+        growAnimation.toValue= @1.0;
+        
+        self.onState = YES;
+        [self.innerOnIconLayer addAnimation:growAnimation forKey:@"growingInner"];
+    }
+    
+    
+}
 @end
