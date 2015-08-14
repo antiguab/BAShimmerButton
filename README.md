@@ -7,8 +7,15 @@
 
 
 ## Overview
-![examplea]()
-![exampleb]()
+**Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (run the code for best display)** 
+<br/>
+<p align="center">
+    <img src="https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif"/>
+</p>
+<br/>
+![example1](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example1.gif)
+![example4](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example4.gif)
+![example6](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example10.gif)
 
 A call-to-action button that offers shimmer, movement, and off/on functionality. Great for getting a users attention in multiple ways!
 
@@ -51,7 +58,7 @@ BAShimmerButton *button = [[BAShimmerButton alloc] initWithFrame:self.view.frame
 
 This creates the following animation/button:
 
-![example1]()
+![example1](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example1.gif)
 
 
 ### Advanced Usage
@@ -63,12 +70,12 @@ You can use `initWithFrame:` or simply adding the view in Interface Builder to u
 ####showButtonWithAnimation:(bool)animated
 Calling this method shows the button, by passing in `@NO`, you will simply show the button. If you pass `@YES`, you'll see the following animation (same code in the **basic** section):
 
-![example1]()
+![example1](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example1.gif)
 
 ####hideButtonWithAnimation:(bool)animated
 Similar to the one above, but the reverse:
 
-![example2]()
+![example2](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example2.gif)
 
 ####toggleButton
 This will transiton the button from the on to off state, or vice versa. The IB action can be done like the example below:
@@ -82,8 +89,8 @@ This will transiton the button from the on to off state, or vice versa. The IB a
 
 You can then produce the following:
 
-![example3]()
-![example4]()
+![example3](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example3.gif)
+![example4](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example4.gif)
 
 
 ####wiggleButton
@@ -91,10 +98,12 @@ To draw attention to your button, try this method:
 ```objc
 BAShimmerButton *button = [[BAShimmerButton alloc] initWithFrame:self.view.frame];
 [self addCircularMask:button];
-[button wiggleButton];//@NO skips the animation
+[button showButtonWithAnimation:@NO];
+[button wiggleButton];
 ```
 which results in the following:
-![example5]()
+
+![example5](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example5.gif)
 
 
 #### Icon Image
@@ -111,7 +120,7 @@ button.iconImage = [UIImage imageNamed:@"icon"];
 ```
 This creates this button:
 
-![example10]()
+![example10](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example10.gif)
 
 #### IconOff ImageColor
 
@@ -129,7 +138,7 @@ button.iconImage = [UIImage imageNamed:@"icon"];
 **Note: Set before you set iconImage**
 This creates the following view:
 
-![example11]()
+![example11](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example11.gif)
 
 #### Shimmer Duration
 If you want the shimmering to last longer/shorter, you can edit the `shimmerDuration` property:
@@ -142,7 +151,7 @@ button.shimmerDuration = 1.0f;
 
 This results in the following:
 
-![example6]()
+![example6](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example6.gif)
 
 #### Shimmer Color
 You can also change the overall color of the shimmer by editing the `shimmerColor` property:
@@ -157,7 +166,7 @@ button.shimmerColor = [UIColor colorWithHex:0x3498db];
 
 This creates the following effect:
 
-![example7]()
+![example7](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example7.gif)
 
 #### Shimmer Direction
 
@@ -179,7 +188,7 @@ button.shimmerDuration = BAShimmerDirectionTopToBottom;
 ```
 This creates the following view:
 
-![example8]()
+![example8](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example8.gif)
 
 #### Gradient Size
 
@@ -192,7 +201,7 @@ button.gradientSize = 0.3f;
 ```
 This creates the following button:
 
-![example9]()
+![example9](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example9.gif)
 
 ## Author
 
