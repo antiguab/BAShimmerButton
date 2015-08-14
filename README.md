@@ -7,9 +7,16 @@
 
 
 ## Overview
-![examplea](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif)
+**Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (scroll down for better examples or run the code for best display)** 
+<br/>
+<br/>
 ![example1](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example1.gif)
+![example4](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example4.gif)
+![example6](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example10.gif)
+
+![examplea](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif)
 ![exampleb](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/exampleb.gif)
+
 
 A call-to-action button that offers shimmer, movement, and off/on functionality. Great for getting a users attention in multiple ways!
 
@@ -96,6 +103,7 @@ BAShimmerButton *button = [[BAShimmerButton alloc] initWithFrame:self.view.frame
 [button wiggleButton];
 ```
 which results in the following:
+
 ![example5](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example5.gif)
 
 
