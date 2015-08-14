@@ -8,7 +8,6 @@
 
 ## Overview
 **Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (run the code for best display)** 
-<br/>
 <p align="center">
     <img src="https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif"/>
 </p>
