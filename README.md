@@ -7,12 +7,11 @@
 
 
 ## Overview
-**Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (scroll down for better examples or run the code for best display)** 
+**Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (run the code for best display)** 
 <br/>
-<!--<p align="center">-->
-  ![examplea](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif)
-    <!--<img src="https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif"/>-->
-<!--</p>-->
+<p align="center">
+    <img src="https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/examplea.gif"/>
+</p>
 <br/>
 ![example1](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example1.gif)
 ![example4](https://github.com/antiguab/BAShimmerButton/blob/master/readmeAssets/example4.gif)
