@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/BAShimmerButton.svg?style=flat)](http://cocoapods.org/pods/BAShimmerButton)
 [![Platform](https://img.shields.io/cocoapods/p/BAShimmerButton.svg?style=flat)](http://cocoapods.org/pods/BAShimmerButton)
 
-
 ## Overview
 **Note:GIF QUALITY MAKES THE SHIMMER LESS SMOOTH (run the code for best display)** 
 <p align="center">
