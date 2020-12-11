@@ -49,22 +49,8 @@
     
 }
 
-//- (void)hidebut {
-//    BAShimmerButton * button = (BAShimmerButton*)[self.view viewWithTag:105];
-//    [self addCircularMask:button];
-//    [button wiggleButton];//@NO skips the animation
-//}
 - (void)viewDidLayoutSubviews {
     if(self.firstLoad && [self.buttonExamples count] > 0){
-//        NSInteger tag = 105;
-//        BAShimmerButton * button = (BAShimmerButton*)[self.view viewWithTag:tag];
-//        [self addCircularMask:button];
-//        button.backgroundColor = [UIColor colorWithHex:0x22313F];
-//        button.shimmerColor = [UIColor colorWithHex:0x3498db];
-//        button.iconOffImageColor = [UIColor colorWithHex:0xfffffff];
-//        button.iconImage = [UIImage imageNamed:@"icon"];
-//        [button showButtonWithAnimation:@NO];//@NO skips the animation
-
         for(int i = 0; i < [self.buttonExamples count]; i++) {
             NSInteger tag = 101 + i;
             BAShimmerButton * button = (BAShimmerButton*)[self.view viewWithTag:tag];
